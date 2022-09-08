@@ -1,0 +1,42 @@
+<div class="container-fluid mt-5 contact-style" id="contactid">
+    <div class="row">
+        <div class="col-md-10 col-12 mx-auto">
+            <h1 class="text-center main-heading">Contact US</h1>
+            <p class="text-center sub-heading">WE WILL BE HAPPY TO HELP YOU</p>
+            <div class="row">
+                <div class="col-md-6 col-12 mx-auto">
+                    <form action="/contact" method="POST">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Full Name"
+                                name="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" name="email" placeholder="Enter Email..">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1" class="form-label">Phone</label>
+                            <input type="number" class="form-control" id="exampleInputPassword1" name="phone"
+                                placeholder="Enter phone No.">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1" class="form-label">Message</label>
+                            <textarea id="textarea" maxlength="150" class="form-control" name="message"
+                                placeholder="Leave a comment here maxmimum 150 charecter allowed!!"
+                                id="floatingTextarea2" style="height: 100px; word-wrap:break-word;"></textarea>
+                            <div id="the-count" class="d-flex justify-content-end fs-4 p-1">
+                                <span id="current">0</span>
+                                <span id="maximum">/ 150</span>
+                            </div>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-primary btn-style">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

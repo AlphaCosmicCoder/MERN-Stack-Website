@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>headlinks}}
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    {{>navbar}}
+
+    {{!-- hero section --}}
+    <div class="container-fluid mt-5" style="height: 100vh;">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                <div class="row">
+                    <div
+                        class="col-md-6 col-12 hero-text order-md-0 order-1 d-flex justify-content-center align-items-start flex-column">
+                        <h1>WE Will HELP YOU TO</h1>
+                        <h1>GROW YOUR BUSINESS</h1>
+                        <P>We Are The Team Of <span class="bold-style">Professional Developer✌️ </span></P>
+                        <button class="btn btn-primary btn-style">Read more</button>
+                    </div>
+                    <div class="col-md-6 col-12 hero-text order-md-1 order-0">
+                        <figure>
+                            <img src="imeges/growth.svg" alt="herosection_image">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{!-- About US Start --}}
+    {{>about}}
+
+    {{!-- Services Start --}}
+    {{>services}}
+
+    {{!-- map --}}
+    {{>maps}}
+
+    {{!-- contact --}}
+    {{>contact}}
+
+    {{!-- footer --}}
+    {{>footer}}
+</body>
+<script>
+    $('textarea').keyup(function () {
+
+        var characterCount = $(this).val().length,
+            current = $('#current'),
+            maximum = $('#maximum'),
+            theCount = $('#the-count');
+
+        current.text(characterCount);
+
+
+        /*This isn't entirely necessary, just playin around*/
+        if (characterCount < 70) {
+            current.css('color', '#666');
+        }
+        if (characterCount > 70 && characterCount < 90) {
+            current.css('color', '#6d5555');
+        }
+        if (characterCount > 90 && characterCount < 100) {
+            current.css('color', '#793535');
+        }
+        if (characterCount > 100 && characterCount < 120) {
+            current.css('color', '#841c1c');
+        }
+        if (characterCount > 120 && characterCount < 139) {
+            current.css('color', '#8f0001');
+        }
+
+        if (characterCount >= 140) {
+            maximum.css('color', '#8f0001');
+            current.css('color', '#8f0001');
+            theCount.css('font-weight', 'bold');
+        } else {
+            maximum.css('color', '#666');
+            theCount.css('font-weight', 'normal');
+        }
+    });
+
+</script>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>headlinks}}
+    <link rel="shortcut icon" href="https://img.icons8.com/fluency/96/000000/data-configuration.png"
+        type="image/x-icon">
+    <title>DataBase 💾</title>
+    <style>
+        @media (max-width: 768px) {
+            .main-cont {
+                width: 40.60rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid bg-success p-2 main-cont">
+        <h3 class="text-center text-light">USER DATABASE</h3>
+    </div>
+    <div class="containerfluid m-2">
+        <a href="/" class="btn btn-primary btn-style m-auto">Go Back</a>
+    </div>
+    <div class="container-fluid py-3 mt-2">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                <div class="row">
+                    <div class="table container-fluid">
+                        <table class="table">
+                            <thead class="table-dark">
+                                <th>SL.</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Message</th>
+                            </thead>
+                            <tbody>
+                                {{#each Data}}
+                                <tr>
+                                    {{!-- <td>{{this._id}}</td> --}}
+                                    <td>{{@index}}</td>
+                                    <td>{{this.name}}</td>
+                                    <td>{{this.email}}</td>
+                                    <td>{{this.phone}}</td>
+                                    <td>{{this.message}}</td>
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+
+</script>
+
+</html>
